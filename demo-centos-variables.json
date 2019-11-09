@@ -1,0 +1,8 @@
+{
+    "service_principal_client_id":      "<client id from running az ad sp create-for-rbac --name [ServicePrincipalName]. Probably http://[ServicePrincipalName].>",
+    "service_principal_client_secret":  "<client secret from running az ad sp create-for-rbac --name [ServicePrincipalName]>",
+    "azure_ad_tenant_id":               "<tenant for the created service principal>",
+    "azure_subscription_id":            "<subscription to hold the generated VM>",
+    "resource_group_name":              "<name of the resource group to hold the generated VM>",
+    "resource_group_location":          "centralus<to get other names, login, then use az account list-locations | jq '[.[] | {name: .name, displayName: .displayName}]'"
+}
