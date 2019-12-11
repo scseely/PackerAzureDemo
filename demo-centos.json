@@ -7,9 +7,10 @@
     "tenant_id": "{{user `azure_ad_tenant_id`}}",
     "subscription_id": "{{user `azure_subscription_id`}}",
 
-    "managed_image_resource_group_name": "{{user `resource_group_name`}}",
-    "managed_image_name": "demoimg",
-
+    "capture_container_name": "{{user `azure_container_name`}}",
+    "capture_name_prefix": "demoimg",
+    "resource_group_name": "{{user `resource_group_name`}}",
+    "storage_account": "{{user `azure_storage_account`}}",
     "os_type": "Linux",
     "os_disk_size_gb": "64",
     "image_publisher": "OpenLogic",
