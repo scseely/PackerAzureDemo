@@ -12,10 +12,10 @@
     "resource_group_name": "{{user `resource_group_name`}}",
     "storage_account": "{{user `azure_storage_account`}}",
     "os_type": "Linux",
-    "os_disk_size_gb": "64",
-    "image_publisher": "OpenLogic",
-    "image_offer": "CentOS",
-    "image_sku": "8.0",
+    "os_disk_size_gb": "128",
+    "image_publisher": "redhat",
+    "image_offer": "rhel",
+    "image_sku": "8",
 
     "azure_tags": {
         "dept": "Engineering",
