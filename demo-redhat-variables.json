@@ -1,0 +1,10 @@
+{
+    "service_principal_client_id":      "http://[your app]",
+    "service_principal_client_secret":  "[the secret]",
+    "azure_ad_tenant_id":               "[tenant for the service principal]",
+    "azure_subscription_id":            "[id for the subscription]",
+    "resource_group_name":              "[new resource group name]",
+    "resource_group_location":          "westus2",
+    "azure_storage_account":            "[name for the storage account, can be new]",
+    "azure_container_name":             "vhd"
+}

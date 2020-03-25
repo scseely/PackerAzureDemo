@@ -1,0 +1,10 @@
+{
+    "service_principal_client_id":      "http://<client id>",
+    "service_principal_client_secret":  "<client secret>",
+    "azure_ad_tenant_id":               "<tenant id>",
+    "azure_subscription_id":            "<subscription id>",
+    "resource_group_name":              "<resource group name>",
+    "resource_group_location":          "<resource group location>",
+    "azure_storage_account":            "<desired name of storage account>",
+    "azure_container_name":             "vhd"
+}
