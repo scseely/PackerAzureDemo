@@ -1,8 +1,10 @@
 {
-    "service_principal_client_id":      "<client id from running az ad sp create-for-rbac --name [ServicePrincipalName]. Probably http://[ServicePrincipalName].>",
-    "service_principal_client_secret":  "<client secret from running az ad sp create-for-rbac --name [ServicePrincipalName]>",
-    "azure_ad_tenant_id":               "<tenant for the created service principal>",
-    "azure_subscription_id":            "<subscription to hold the generated VM>",
-    "resource_group_name":              "<name of the resource group to hold the generated VM>",
-    "resource_group_location":          "centralus<to get other names, login, then use az account list-locations | jq '[.[] | {name: .name, displayName: .displayName}]'"
+    "service_principal_client_id":      "http://saasappmanager",
+    "service_principal_client_secret":  "Fbw4Iqt0Ju.a4c7x:X]?My4iHqKn6Og8",
+    "azure_ad_tenant_id":               "0f1a53c8-1135-457a-bcdb-d58abc87e4b7",
+    "azure_subscription_id":            "e03d0723-1fae-4bb8-8e28-41ec7e1185f5",
+    "resource_group_name":              "scsfiorano",
+    "resource_group_location":          "westus2",
+    "azure_storage_account":            "scsfioranostg",
+    "azure_container_name":             "vhd"
 }
