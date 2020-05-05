@@ -1,0 +1,10 @@
+{
+    "service_principal_client_id":      "http://<id of managed app>",
+    "service_principal_client_secret":  "<client secret for managed app>",
+    "azure_ad_tenant_id":               "<tenant for identification>",
+    "azure_subscription_id":            "subscription to install into",
+    "resource_group_name":              "name of resource group",
+    "resource_group_location":          "location for creating the resource group",
+    "azure_storage_account":            "storage account location for creating new vhd",
+    "azure_container_name":             "vhd"
+}
