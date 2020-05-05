@@ -34,6 +34,7 @@ resource_group_name=$(echo $base_name)rg
 # Login as the service principal
 echo "Getting the connection string"
 #az login --service-principal -u $service_principal_id -p $service_principal_secret --tenant $azure_ad_tenant_id
+az account set -s $azure_subscription_id
 storage_connection_string=$(az storage account show-connection-string --name $vhd_storage_account --query connectionString --output tsv)
 
 # Pull the most recent VHD
@@ -48,6 +49,7 @@ latest_vhd=$(az storage blob list --account-name $vhd_storage_account \
               | sort -k2 -r \
               | head -n 1 \
               | cut -f1)
+echo "Found $latest_vhd"
 
 # Generate a SAS URI which expires 1 month from today
 echo "Generating SAS URI"
@@ -91,7 +93,7 @@ echo "Creating VM"
 
 az vm create --name $(echo $base_name)vm \
              --resource-group $resource_group_name \
-             --os-type Linux \
+             --os-type Windows \
              --use-unmanaged-disk \
              --admin-username $admin_username \
              --admin-password $admin_password \
@@ -102,4 +104,4 @@ az vm create --name $(echo $base_name)vm \
              --size $vm_sku
 
 
-az logout
+#az logout

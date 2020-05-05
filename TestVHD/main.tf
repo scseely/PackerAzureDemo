@@ -5,6 +5,7 @@ provider "azurerm" {
     tenant_id       = var.azure_ad_tenant_id   
     client_id       = var.service_principal_client_id
     client_secret   = var.service_principal_client_secret
+    features {}
 }
 
 # Create a resource group if it doesn’t exist
@@ -77,7 +78,7 @@ resource "azurerm_network_interface" "nic" {
     name                      = "${var.base_name}Nic"
     location                  = azurerm_resource_group.resourcegroup.location
     resource_group_name       = azurerm_resource_group.resourcegroup.name
-    network_security_group_id = azurerm_network_security_group.nsg.id
+    #network_security_group_id = azurerm_network_security_group.nsg.id
 
     ip_configuration {
         name                          = "${var.base_name}NicConfiguration"
